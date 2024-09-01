@@ -1,0 +1,835 @@
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.large-section {
+    padding: 120px 0px;
+}
+.large-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: black;  
+}
+.line {
+    background-color: rgb(97, 165, 192);
+    height: 4px;
+    margin: auto;
+    margin-top: 5px;
+}
+.parent {
+    overflow: auto;
+    margin-top: 80px;
+}
+.middle-div {
+    margin: 0px 5%;
+}
+/* /////////////////////////// */
+/* HEADER */
+.header {
+    width: 100%;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 1000;
+}
+.header-logo   {
+    display: block;
+    height: 55px;
+    width: 80px;
+    margin-left: 70px;
+    border-radius: 5px;
+    float: left;
+}
+.header-list {
+    float: right;
+    margin-right: 100px;
+    margin-top: 10px;
+    position: relative;    
+}
+.header-list li {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;   
+}
+.header-list li a {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+.blog::before {
+    content: "blog post";  
+    position: fixed;
+    top: 56px; 
+    left: 82%; 
+    background-color: rgb(110, 190, 221); 
+    color: black; 
+    padding: 15px; 
+    font-size: 18px;
+    border-radius: 4px; 
+    display: none; 
+    z-index: 4; 
+}
+.blog:hover::before {
+    display: block; 
+}
+.home-li {
+    position: relative;
+}
+.home-li:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+.header-list li {
+    position: relative;
+}
+.header-list li:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    opacity: 0;
+}
+.header-list li:hover:after {
+    opacity: 1;
+    width: 100%;
+    transition: 0.5s;
+}
+/* ////////////////////////////////////// */
+/* HOME */
+.home {
+    background-image: url(../Images/palastine.avif);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-overlay {
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.home-parent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 55%;
+    text-align: center;
+}
+.home-parent h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+}
+.home-parent p {
+    color: rgb(238, 229, 229);
+    margin-top: 15px;
+    letter-spacing: 1px;
+   font-size: 22px; 
+}
+.home-parent button {
+    margin-top: 15px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.home-btn {
+    margin-left: 5px;
+    background-color: rgb(110, 190, 221);
+    color: black;
+}
+.home-parent button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}  
+/* ////////////////////////////////////// */
+/* SECOND SECTION REALITY */
+.reality-line {
+    width: 200px;
+}
+.reality-card ,.crimes-card ,.impact-card , .empower-card, .journal-card, .news-card {
+    width: 30%;
+    float: left;
+}
+.reality-card,.empower-card,.journal-card {
+    text-align: center;
+}
+.reality-card {
+    border: 2px solid black; 
+    padding: 20px 20px;
+    position: relative;
+}
+.reality-card i {
+    font-size: 30px;
+    color: rgb(50, 132, 165); 
+}
+.reality-card h3 {
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 10px 0px;
+    color: black; 
+}
+.reality-card p {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: rgb(33, 33, 33); 
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.reality-card a {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(50, 132, 165); 
+}
+.reality-card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: black; 
+    opacity: 0;
+    z-index: 1;
+}
+.reality-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.85; 
+    transition: 1s;
+}
+.reality-card * {
+    position: relative;
+    z-index: 2;
+}
+.reality-card:hover i {
+    color: #ecf0f1; 
+    transition: 1s;
+}
+.reality-card:hover h3 {
+    color: #ecf0f1; 
+    transition: 1s;
+}
+.reality-card:hover p {
+    color: #bdc3c7; 
+    transition: 1s;
+}
+.reality-card:hover a {
+    color: #ecf0f1; 
+    transition: 1s;
+}
+/* ////////////////////////////////////// */
+/* THIRD SECTION CRIMES */
+.crimes-line{
+    width: 150px;
+}
+.crimes-card {
+    position: relative;
+    padding: 10px;
+}
+.crimes-image {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+.crimes-image img{
+    width: 270px;
+    height: 270px;
+}
+.row2{
+    margin-top: 40px;
+}
+.crimes-info-overlay {
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    text-align: center;
+}
+.crimes-card:hover .crimes-info-overlay{
+    visibility: visible;
+}
+.crimes-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+}
+.crimes-hero h4 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.crimes-hero p {
+    color: rgb(239, 236, 236);
+    font-size: 25px;
+    margin: 5px 0px;
+}
+.crimes-hero i {
+    display: inline-block;
+    color: white;
+    border: 1px solid #2980b9;
+    background-color: black;
+    font-size: 25px;
+    margin-right: 7px;
+    padding: 5px;
+}
+/* ////////////////////////////////////// */
+/* FORTH SECTION IMPACT */
+.impact-line {
+    width: 170px;
+}
+.impact-card {
+    padding: 20px 0px ;
+    overflow: auto;
+    border: 2px solid black; 
+    position: relative;
+}
+.i-row2 {
+    margin-top: 30px;
+}
+.impact-icon {
+    float: left;
+    margin: 7px;
+    font-size: 40px;
+    color: rgb(50, 132, 165); 
+    width: 10%;
+    margin:  10px 5%;
+}
+.impact-info {
+    float: left;
+    width: 70%;
+    margin-right: 10%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.impact-info h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    color: black; 
+}
+.impact-info  p {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: black; 
+    margin-top: 20px;
+    font-size: 18px;
+    line-height:25px;
+}
+.impact-card:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: black; 
+    opacity: 0;
+    z-index: 1;
+}
+.impact-card:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.85; 
+    transition: 1s;
+}
+ .impact-card * {
+    position: relative;
+    z-index: 2;
+} 
+.impact-card:hover i {
+    color: #ecf0f1; 
+    transition: 1s;
+}
+.impact-card:hover h3 {
+    color: #ecf0f1;
+    transition: 1s;
+}
+.impact-card:hover p {
+    color: #bdc3c7;
+    transition: 1s;
+}
+/* ////////////////////////////////////// */
+/* FIFTH SECTION MAP */
+.map-parent {
+    margin: auto;
+    width: 80%;
+    overflow: auto; 
+}
+.facts, .map-image, .image-choose li ,.static-card, .developer-person{
+    float: left;
+}
+
+.facts{
+    width: 40%;
+    margin-right: 20% ;
+}
+.map-image {
+    width: 40%;
+}
+.map-image img {
+    width: 100%;
+    height: 550px;
+}
+.map-parent h2 {
+    font-size: 50px;
+    text-transform: capitalize;
+    color: black; 
+}
+.map-parent  p {
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: rgb(32, 32, 32); 
+    margin-top: 20px;
+    font-size: 20px;
+}
+.par1 {
+    font-size: 20px;
+}
+.map-parent i {
+    font-size: 30px;
+    color: black;
+}
+.map-line {
+    height: 3px;
+    width: 177px;
+    background-color: black;
+    margin-top: 3px;
+}
+.image-choose ul {
+    width: 100px;
+    list-style-type: none;
+    padding: 0;
+    margin: 3px 350px;
+    overflow: auto;
+}
+.image-choose li {
+    width: 10px;
+    height: 10px;
+    background-color: white; 
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.image-choose .choose {
+    background-color: black;
+}
+.image-choose li:hover {
+    background-color: #203953;
+}
+/* ////////////////////////////////////// */
+/* SIXTH SECTION STATICS */
+.statics {
+    width: 100vw;
+    height: 50vh;
+    background-color: #4e9bce;
+    background-image: url(../Images/damage.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.static-overlay{
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.statics-parent {
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+}
+.static-card {
+    width: 20%;
+    margin-right: 5%;
+    text-align: center; 
+}
+   .static-card i {
+    font-size: 45px;
+    color: skyblue;
+}
+   .static-card h3 {
+    font-size: 30px;
+    margin-top: 5px;
+    color: white;
+}
+   .static-card p {
+    font-size: 20px;
+    color: rgb(235, 230, 230);
+    margin-top: 3px;  
+}
+/* ////////////////////////////////////// */
+/* SEVENTH SECTION EMPOWERING */
+.empower-line {
+    width: 350px;
+}
+.empower-card {
+    padding: 20px;
+    border: 2px solid rgb(50, 132, 165); 
+   position: relative;
+}
+.empower-card h3 {
+    font-size: 25px;
+    text-transform: capitalize;
+    color: black; 
+    margin-bottom: 20px;
+}
+.empower-card p {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    color: black; 
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 28px;
+}
+.circle {
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgb(50, 132, 165);
+    border-radius: 50%;
+    margin: auto;
+    padding-top: 20px;
+}
+.circle i {
+    font-size: 40px;
+    color: black;
+}
+.circle p {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+.empower-card button {
+    padding: 10px 15px;
+    font-size: 18px;
+    color: black;
+    border: 1px solid black;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.empower-card:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+.empower-card:hover:after {
+    height: 100%;
+}
+.empower-card:hover h3 ,.empower-card:hover i ,.empower-card:hover .circle-hero p{
+    color: rgb(33, 94, 119);
+    transition: 0.5s;
+}
+/* ////////////////////////////////////// */
+/* EIGHTH SECTION DEVELOPERS */
+.developer {
+    width: 100vw;
+    height: 50vh;
+    background-image: url(../images/comp.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 150px;
+    position: relative;
+}
+.dev-overlay {
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.developer-parent {
+    overflow: auto;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.developer-person {
+    width: 40%;
+   color: #ecf0f1;
+}
+.person1 {
+    margin-right: 20%;
+}
+.dev-all{
+    overflow: auto;
+    width: 70%;
+}
+.dev-img {
+    float: left;
+    width: 30%;
+    margin-right: 7%;   
+    text-align: center;
+}
+.dev-img img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+.dev-info {
+    float: left;
+    width: 52%;
+}
+.dev-info h3{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5px;
+}
+.dev-info p {
+    font-size: 18px;
+    word-spacing: 2px;
+    color: rgb(129, 191, 216);
+}
+.developer-person .dev-par {
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: rgb(222, 214, 214);
+    word-spacing: 1px;
+    font-size: 18px;
+}
+/* ////////////////////////////////////// */
+/* NINTH SECTION JOURNALISTS */
+.journal-line {
+    width: 200px;
+ }
+.journal-card {
+    padding: 30px 20px;
+    position: relative;
+    border: 1px solid rgb(97, 165, 192);
+}
+.journal-img {
+    margin: auto;
+    position: relative;    
+}
+.journal-img img {
+    width: 300px;
+    height: 300px;
+}
+.journal-info-overlay {
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+.journal-card:hover .journal-info-overlay {
+    visibility: visible;
+}
+.journal-info-overlay a {
+   background-color: rgb(100, 176, 207);
+    display: block;
+    width: 40px;
+    height: 50px;
+    margin-left: auto;
+    color: black;
+}
+.journal-info-overlay a i {
+    line-height: 50px;
+    font-size: 20px;
+}
+.journal-card h3 {
+    font-size: 20px;
+    margin: 10px 0px;
+    color: black;
+}
+.journal-card p {
+    font-size: 18px;
+    color: rgb(31, 30, 30);    
+}
+.journal-card:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black;
+    opacity: 0.4;
+}
+.journal-card:hover:after {
+    height: 100%;
+    opacity: 0.1;
+    transition: 1s;
+}
+.journal-card:hover h3 {
+    color: rgb(43, 118, 148);
+    transition: 1s;
+}
+.journal-card:hover p {
+    color: rgb(70, 134, 160);
+    transition: 1s;
+}
+/* ////////////////////////////////////// */
+/* TENTH SECTION NEWS */
+.news {
+    padding: 120px 0px 0px 0x;
+}
+.news-line {
+    width: 180px;
+}
+.news-card {
+    padding: 0px 0px 20px 30px ;
+    position: relative;
+    border: 1px solid rgb(97, 165, 192);
+}
+.news-img {
+    margin-right: 80px;
+}
+.news-img img {
+    width: 250px;
+    height: 250px;
+}
+.news-card i {
+    font-size: 16px;
+    margin: 10px 0px 5px 10px;
+    color: rgb(46, 128, 161);
+}
+.news-card span {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: black;
+}
+.news-card h3 {
+    font-size: 25px;
+    margin: 20px 0px;
+    color: black;
+}
+.news-card p {
+    font-size: 18px;
+    color: rgb(34, 33, 33);
+    line-height: 35px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.news-card a {
+    display: block;
+    margin-top: 20px;
+    color: rgb(37, 114, 145);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.news-card:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgb(57, 131, 160);
+    opacity: 0;
+    transition: 0.5s;
+}
+.news-card:hover:after {
+    height: 100%;
+    opacity: 0.3;
+}
+/* ////////////////////////////////////// */
+/* LAST SECTION FOOTER */
+.footer {
+    width: 100vw;
+    height: 50vh;
+    background-color: black;
+    position: relative;
+}
+.footer-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+}
+.footer-image {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.footer-image img {
+    width: 100%;
+    height: 100%;
+}
+.footer-icons {
+    width: 100%;
+    text-align: center;
+}
+.footer-icons a {
+    display: inline-block;
+    border: 1px solid skyblue;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: skyblue;
+    font-size: 20px;
+    padding-top: 12px ;
+    color: black;
+    text-align: center;
+    margin-right: 5px;
+}
+.footer-icons  a:hover{
+    opacity: 0.7;
+}
+.footer-hero p {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+/* ////////////////////////////////////// */
